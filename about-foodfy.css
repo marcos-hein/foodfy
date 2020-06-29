@@ -20,6 +20,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    font-weight: 700;
+}
+
+#about {
+    font-weight: 700;
+}
+
 h1 {
     font-size: 32px;
     line-height: 38px;
@@ -41,7 +49,7 @@ header {
 }
 
 header img {
-    margin-right: 122px;
+    margin-right: 92px;
 }
 
 header a {
