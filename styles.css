@@ -20,6 +20,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    font-weight: 700;
+    transition: 400ms;
+}
+
 h1 {
     font-size: 32px;
     line-height: 38px;
