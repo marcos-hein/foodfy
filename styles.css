@@ -53,6 +53,15 @@ header a {
     margin-right: 30px;    
 }
 
+.content h2 {
+    display: flex;
+    justify-content: left;
+    margin-left: 230px;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+
 .about {
     background: #FBDFDB;
 
