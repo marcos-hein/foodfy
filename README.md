@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img src="/layouts/assets/logo.png">
+    <img src="public/assets/logo.png">
 </h1>
 
 <h1>
-    <img src="/layouts/Foodfy.gif">
+    <img src="/public/assets/Foodfy.gif">
 </h1>
 
 ---
