@@ -1,64 +1,9 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
-
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-body {
-    background: white;
-    /* margin-left: 231px; */
-    font-family: 'Roboto', sans-serif;
-    color: #111111;
-
-    position: relative;
-    padding-bottom: 50px;
-    min-height: 100vh;
-}
-
-a {
-    color: #111111;
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: 700;
-}
-
+/* 
 #about {
     font-weight: 700;
-}
+} */
 
-h1 {
-    font-size: 32px;
-    line-height: 38px;
-    font-family: Roboto;
-    font-weight: 700;
-}
-
-header {
-    margin-top: 36px;
-    margin-bottom: 30px;
-    margin-left: 231px;
-
-
-    font-size: 16px;
-    line-height: 19px;
-
-    display: flex;
-    align-items: center;
-}
-
-header img {
-    margin-right: 92px;
-}
-
-header a {
-    margin-right: 30px;    
-}
-
-.content {
+#about {
     width: 940px;
     margin-left: 231px;
     margin-bottom: 50px;

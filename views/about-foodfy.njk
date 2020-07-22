@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="https://image.flaticon.com/icons/svg/817/817282.svg" type="image/x-icon" />
+{% extends "layout.njk" %}
+
+
+{% block title %}
     <link rel="stylesheet" href="/about-foodfy.css">
 
-    <title>Foodfy</title>
-</head>
-<body>
-    <header>
-        <a href="/">
-            <img src="/assets/logo.png" alt="Logo marca">        
-        </a>
-        <a href="" id="about">Sobre</a>
-        <a href="recipes">Receitas</a>
-    </header>
+    <title>Sobre - Foodfy</title>
+{% endblock title %}
 
-    <div class="content">
+{% block content %}
+    <div class="content" id="about">
         <h1>Sobre o Foodfy</h1>
         <p>
             Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutpat sapien tristique eu. Morbi metus nunc, interdum in erat placerat, aliquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta tincidunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus ligula ex, semper vitae eros ut, euismod convallis augue.</br></br>
@@ -37,8 +29,5 @@
         </p>
 
     </div>
-    <div id="footer">
-        <p>Todos direitos reservados, receitas Foodfy.</p>
-    </div>
-</body>
-</html>
+
+{% endblock content %}
