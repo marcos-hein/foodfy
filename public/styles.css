@@ -61,13 +61,8 @@ header a:hover {
 }
 
 
-.content h2 {
-    display: flex;
-    justify-content: left;
-    margin-left: 230px;
+.content {
     margin-bottom: 20px;
-
-    font-size: 24px;
 }
 
 .about {
@@ -130,6 +125,12 @@ header a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.content h2 {
+    margin-left: 230px;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .card {
