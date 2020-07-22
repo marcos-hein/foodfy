@@ -235,3 +235,34 @@ header a:hover {
     opacity: 1;
     visibility: visible;
 }
+
+/* ===== ABOUT-FOODFY ===== */
+
+.content#about {
+    width: 940px;
+    margin-left: 231px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.content#about h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+
+    margin-bottom: 20px;
+}
+
+.content#about h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.content#about p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #444444;
+    text-align: justify;
+    margin-bottom: 30px;
+}
