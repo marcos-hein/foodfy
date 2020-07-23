@@ -158,6 +158,12 @@ header a:hover {
     color: #777777;
 }
 
+.card:hover {
+    transition: 250ms;
+    transform: translateY(-3px) scale(1.03);
+    filter: brightness(1);
+}
+
 /* ===== RECIPES ===== */
 
 #recipes {
@@ -165,7 +171,7 @@ header a:hover {
 }
 
 /* ===== RECIPES MODAL ===== */
-
+/* 
 .modal-overlay {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
@@ -190,7 +196,7 @@ header a:hover {
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    /* align-items: center;
 }
 
 .close-modal {
@@ -230,11 +236,11 @@ header a:hover {
 }
 
 /* ===== MODAL.ACTIVE ===== */
-
+/* 
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 /* ===== ABOUT-FOODFY ===== */
 
