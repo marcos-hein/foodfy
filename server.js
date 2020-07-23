@@ -29,6 +29,10 @@ server.get("/recipes", function(req, res) {
     return res.render("recipes", { recipes })
 })
 
+server.get("/detail-recipe", function(req, res) {
+    return res.render("detail-recipe", { recipes })
+})
+
 // cria servidor
 server.listen(5000, function() {
     console.log("Server is running!")
