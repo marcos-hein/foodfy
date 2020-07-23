@@ -4,6 +4,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 
 const server = express()
+const recipes = require("./data")
 
 server.set("view engine", "njk")
 
@@ -24,7 +25,8 @@ server.get("/about-foodfy", function(req, res) {
 })
 
 server.get("/recipes", function(req, res) {
-    return res.render("recipes")
+
+    return res.render("recipes", { recipes })
 })
 
 // cria servidor
