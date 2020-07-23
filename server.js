@@ -17,7 +17,7 @@ nunjucks.configure("views", {
 
 // cria a primeira rota
 server.get("/", function(req, res) {
-    return res.render("index")
+    return res.render("index", { recipes })
 })
 
 server.get("/about-foodfy", function(req, res) {
