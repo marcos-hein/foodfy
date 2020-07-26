@@ -16,11 +16,13 @@ O projeto **FoodFy** é um site de receitas, criado dentro do curso **Launchbase
 
 ## 🚀️ Tecnologias utilizadas
 
-O projeto foi desenvolvido utilizando as seguintes tecnologias
+O projeto foi desenvolvido utilizando as seguintes tecnologias.
 
 - HTML
 - CSS
 - JavaScript
+- NodeJs
+- Nunjucks
 
 ---
 
