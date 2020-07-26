@@ -39,7 +39,7 @@ server.get("/recipes/:index", function(req, res) {
         return res.send("Recipe not found!")
     }
 
-    return res.render("detail-recipe", { recipe : recipes[recipeIndex] })
+    return res.render("detail-recipe", { recipes : recipes[recipeIndex] })
 })
 
 // cria servidor

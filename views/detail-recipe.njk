@@ -2,29 +2,34 @@
 
 {% block content %}
     <div class="content" id="detail-recipe">
-        <div class="recipe-image">
-            <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.title }}">
+        <div class="recipes-image">
+            <img src="{{ recipes.image }}" alt="Imagem de {{ recipes.title }}">
         </div>
-        <div class="recipe-name">
-            <h3>{{ recipe.title }}</h3>
+        <div class="recipes-name">
+            <h2>{{ recipes.title }}</h2>
         </div>
-        <div class="author-recipe">
-            <p>por {{ recipe.author }}</p>
+        <div class="author-recipes">
+            <p>por {{ recipes.author }}</p>
         </div>
 
-        <h2>Ingredientes</h2>
+        <h3>Ingredientes</h3>
 
         <ul>
-            {# for com nunjucks para percorrer o array #}
+            {% for ingredient in recipes.ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+
         </ul>
 
-        <h2>Modo de preparo</h2>
-
+        <h3>Modo de preparo</h3>
+        
         <ul>
-            {# for com nunjucks para percorrer o array #}
+            {% for preparation in recipes.preparation %}
+                <li>{{ preparation }}</li>
+            {% endfor %}
         </ul>
 
-        <h2>Informações adicionais</h2>
-
+        <h3>Informações adicionais</h3>
+        <p>{{ recipes.preparation }}</p>
     </div>
 {% endblock content %}

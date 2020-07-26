@@ -62,6 +62,9 @@ header a:hover {
 
 
 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -70,7 +73,7 @@ header a:hover {
 
     width: 940px;
     height: 366px;
-    margin-left: 231px;
+     
 
     margin-bottom: 50px;
 
@@ -99,6 +102,10 @@ header a:hover {
     max-width: 316px;
 }
 
+.most-accessed {
+    width: 940px;
+}
+
 #footer {
     background: #eeeeee;
     position: absolute;
@@ -119,7 +126,7 @@ header a:hover {
 
 .cards {
     max-width: 940px;
-    margin-left: 231px;
+     
     margin-bottom: 50px;
 
     display: grid;
@@ -128,7 +135,6 @@ header a:hover {
 }
 
 .content h2 {
-    margin-left: 230px;
     margin-bottom: 20px;
     font-size: 24px;
 }
@@ -244,13 +250,12 @@ header a:hover {
 
 /* ===== ABOUT-FOODFY ===== */
 
-.content#about {
-    width: 940px;
-    margin-left: 231px;
+.content#about {   
     margin-bottom: 50px;
     margin-top: 50px;
 }
 .content#about h1 {
+    width: 940px;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
@@ -265,6 +270,7 @@ header a:hover {
 }
 
 .content#about p {
+    width: 940px;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -275,3 +281,30 @@ header a:hover {
 
 /* ===== DETAIL-RECIPE ===== */
 
+.content#detail-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 940px; */
+    /*   */
+    /* margin-bottom: 50px; */
+    /* margin-top: 50px; */
+}
+
+.content#detail-recipe img {
+    width: 940px;
+    height: 280px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.content#detail-recipe h2{
+
+    font-size: 36px;
+}
+
+.content#detail-recipe h3{
+    font-size: 24px;
+}
