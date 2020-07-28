@@ -1,8 +1,15 @@
 {
   "name": "foodfy_project",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">     <img src=\"/layouts/assets/logo.png\"> </h1>",
-  "main": "scripts.js",
+  "description": "<h1 align=\"center\">     <img src=\"public/assets/logo.png\"> </h1>",
+  "main": "data.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^14.5.0",
+    "nodemon": "^2.0.4",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
@@ -17,13 +24,5 @@
   "bugs": {
     "url": "https://github.com/vinicius-hein/foodfy/issues"
   },
-  "homepage": "https://github.com/vinicius-hein/foodfy#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jquery": "^3.5.1",
-    "nunjucks": "^3.2.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+  "homepage": "https://github.com/vinicius-hein/foodfy#readme"
 }
