@@ -13,28 +13,40 @@
                 <p>por {{ recipes.author }}</p>
             </div>
             <div class="recipes-ingredients">
-                <h3>Ingredientes</h3>
+                <div class="subtitle">
+                    <h3>Ingredientes</h3>
 
-                <ul>
+                    <span class="button">ESCONDER</span>
+                </div>
+                <ul class="recipe-hide-show">
                     {% for ingredient in recipes.ingredients %}
                         <li>{{ ingredient }}</li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="recipes-prepararion">
-                <h3>Modo de preparo</h3>
-                
-                <ul>
+                <div class="subtitle">
+                    <h3>Modo de preparo</h3>
+
+                    <span class="button">ESCONDER</span>
+                </div>
+                <ul class="recipe-hide-show">
                     {% for preparation in recipes.preparation %}
                         <li>{{ preparation }}</li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="recipes-information">
-                <h3>Informações adicionais</h3>
-                <p>{{ recipes.information }}</p>
+                <div class="subtitle">
+                    <h3>Informações adicionais</h3>
+
+                    <span class="button">ESCONDER</span>
+                </div>
+                <p class="recipe-hide-show">{{ recipes.information }}</p>
             </div>
         </div>
         
     </div>
+
+    <script src="/scripts.js"></script>
 {% endblock content %}
