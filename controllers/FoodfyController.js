@@ -1,4 +1,4 @@
-const data = require('./data')
+const data = require('../data')
 
 exports.index = function(req, res) {
     return res.render("site/index", { recipes : data })

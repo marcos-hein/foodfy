@@ -35,9 +35,9 @@ h1 {
 }
 
 header {
-    margin-top: 36px;
+    /* margin-top: 36px;
     margin-bottom: 30px;
-    margin-left: 231px;
+    margin-left: 231px; */
 
 
     font-size: 16px;
@@ -65,7 +65,7 @@ header a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .about {
@@ -283,4 +283,88 @@ header a:hover {
 .hidden {
     display: none;
     transition: 500ms;
+}
+
+/* ===== FOODFY-ADMIN ===== */
+
+/* HEADER ADMIN */
+header .admin {
+    width: 100vw;
+    height: 80px;
+    background-color: #111111;
+}
+
+.admin a {
+    display: block;
+    padding: 26px;
+    margin-left: 230px;
+}
+
+/* CONTENT ADMIN */
+
+.admin.content {
+    margin-top: 50px;
+}
+.manage-recipes {
+    display: block;
+    margin-top: 50px;
+    margin-left: 230px;
+}
+
+.admin.content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* CARDS ADMIN */
+
+.admin.cards {
+    max-width: 940px;
+     
+    margin-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0px;
+    column-gap: 20px;
+}
+
+.admin.card {
+    display: grid;
+    grid-template-columns: 172px 1fr;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.admin.card img {
+    width: 172px;
+    height: 80px;
+    object-fit: cover cover;
+    
+    /* margin-bottom: 20px; */
+
+    border-radius: 8px;
+}
+
+.admin.card h3 {
+    margin-bottom: 5px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.admin.card p {
+    font-size: 14px;
+    color: #777777;
+}
+
+.admin.card a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+
+    padding: 0;
+    margin-left: 0px;
+    margin-top: 10px;
 }

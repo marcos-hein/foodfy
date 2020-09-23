@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="https://image.flaticon.com/icons/svg/817/817282.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="/styles.css">
+        
+    {% block title %}
+        <title>Foodfy</title>
+    {% endblock title %}
+
+</head>
+<body>
+    <header>
+        <div class="admin">
+            <a href="/">
+                <img src="/assets/logo-white.png" alt="Logo marca">        
+            </a>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+    
+</body>
+</html>
