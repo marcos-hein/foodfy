@@ -1,16 +1,15 @@
 const data = require('./data')
 
-
 exports.index = function(req, res) {
-    return res.render("index", { recipes : data })
+    return res.render("site/index", { recipes : data })
 }
 
 exports.about = function(req, res) {
-    return res.render("about-foodfy")   
+    return res.render("site/about-foodfy")   
 }
 
 exports.recipes = function(req, res) {
-    return res.render("recipes", { recipes : data })
+    return res.render("site/recipes", { recipes : data })
 }
 
 exports.recipeDetails = function(req, res) {
@@ -20,5 +19,5 @@ exports.recipeDetails = function(req, res) {
         return res.send("Recipe not found!")
     }
 
-    return res.render("detail-recipe", { recipes : data[recipeIndex] })
+    return res.render("site/detail-recipe", { recipes : data[recipeIndex] })
 }
