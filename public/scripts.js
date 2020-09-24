@@ -38,16 +38,3 @@ for (const button in hideShowButtons) {
     })
 }
 
-for (const button in hideShowButtons) {
-    hideShowButtons[button].addEventListener("click", function() {
-        if(recipeInfos[button].classList.contains('hidden')) {
-            recipeInfos[button].classList.remove('hidden')
-
-            hideShowButtons[button].textContent = 'ESCONDER'
-        } else {
-            recipeInfos[button].classList.add('hidden')
-            
-            hideShowButtons[button].textContent = 'MOSTRAR'
-        }
-    })
-}

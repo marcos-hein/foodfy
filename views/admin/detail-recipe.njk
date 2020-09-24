@@ -1,13 +1,13 @@
 {% extends "layout-admin.njk" %}
 
 {% block content %}
+    <div class="top-container">
+        <h3>Receita: {{ recipe.title }}</h3>
+        <a href="/admin/recipes/{{recipeIndex}}/edit" class="button">Editar receita</a>
+    </div>
     <div class="content">
         <div class="detail-recipe">
 
-            <div class="top-container">
-                <h3>Receita: {{ recipe.title }}</h3>
-                <a href="/admin/recipes/{{recipeIndex}}/edit" class="button">Editar receita</a>
-            </div>
             <div class="recipes-image">
                 <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.title }}">
             </div>
