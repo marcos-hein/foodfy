@@ -16,7 +16,7 @@ routes.get('/recipes/:index', foodfy.recipeDetails)
 routes.get('/admin/recipes', recipes.index)
 
 // Mostrar formulário de nova receita
-// routes.get('/admin/recipes/create', recipes.create)
+routes.get('/admin/recipes/create', recipes.create)
 
 // Exibir detalhes de uma receita
 routes.get('/admin/recipes/:id', recipes.show)
