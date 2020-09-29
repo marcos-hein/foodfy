@@ -35,16 +35,11 @@ h1 {
 }
 
 header {
-    /* margin-top: 36px;
-    margin-bottom: 30px;
-    margin-left: 231px; */
-
-
     font-size: 16px;
     line-height: 19px;
 
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 header img {
@@ -288,16 +283,18 @@ header a:hover {
 /* ===== FOODFY-ADMIN ===== */
 
 /* ===== HEADER ADMIN ===== */
-header .admin {
+header .black-box {
     width: 100vw;
     height: 80px;
+    display: flex;
+    justify-content: center;
     background-color: #111111;
 }
 
-.admin a {
-    display: block;
-    padding: 26px;
-    margin-left: 230px;
+.admin {
+    width: 940px;
+    display: flex;
+    align-items: center;
 }
 
 /* ===== CONTENT ADMIN ===== */
