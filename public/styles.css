@@ -407,3 +407,52 @@ header .admin {
     font-size: 16px;
     line-height: 17px;
 }
+
+/* ===== FORM ===== */
+
+form.recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recipe-item {
+    margin-top: 30px;
+}
+
+.recipe-item div:nth-child(1) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.recipe-item button[type="button"] {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #6558C3;
+    cursor: pointer;
+    outline: none;
+}
+
+input {
+    width: 940px;
+    height: 49px;
+    outline: none;
+    color: #555555;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    
+    padding-left: 4px;
+}
+
+.recipe-item:last-child input{
+    height: 257px;
+}
+
+input::placeholder {
+    font-weight: normal;
+    margin-left: 4px;
+}

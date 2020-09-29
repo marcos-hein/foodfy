@@ -5,8 +5,58 @@
         <h3>Criando receita</h3>
         <a href="/admin/recipes/{{recipeIndex}}/edit" class="button">Salvar receita</a>
     </div>
-    <form class="" action="/admin/recipes" method="POST">
+    <form class="recipe-form" action="/admin/recipes" method="POST">
+        <div class="recipe-item">
+            <div>Imagem da receita</div>
+            <div>
+                <input
+                    type="url"
+                    name="image"
+                    placeholder="https://"
+                >
+            </div>
+        </div>
 
+        <div class="recipe-item">
+            <div>Ingredientes</div>
+            <div id="ingredientes">
+                <div class="ingredient">
+                    <input
+                        type="text"
+                        name="ingredients"
+                        placeholder=""
+                    >
+                </div>
+            </div>
+
+            <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+        </div>
+
+        <div class="recipe-item">
+            <div>Modo de preparo</div>
+            <div id="steps">
+                <div class="step">
+                    <input
+                        type="text"
+                        name="preparation"
+                        placeholder=""
+                    >
+                </div>
+            </div>
+
+            <button type="button" class="add-step">Adicionar novo passo</button>
+        </div>
+
+        <div class="recipe-item">
+            <div>Informações adcionais</div>
+            <div>
+                <input
+                    type="text"
+                    name="ingredients"
+                    placeholder=""
+                >
+            </div>
+        </div>
     </form>
 
 
