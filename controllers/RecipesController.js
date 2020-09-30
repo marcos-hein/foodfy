@@ -1,3 +1,4 @@
+const fs = require('fs')
 const data = require('../data.json')
 
 exports.index = function(req, res) {
@@ -13,16 +14,30 @@ exports.create = function(req, res) {
 
 // post
 exports.post = function(req, res) {
+
     const keys = Object.keys(req.body)
 
     for(const key of keys) {
-        console.log("aqui")
         if (req.body[key] == "") {
             return res.send('Please, Fill all fields!')
         }
     }
-    
-    return res.send(req.body)
+
+    let { image, ingredients, preparation, information} = req.body
+
+    data.recipes.push({
+        image,
+        ingredients,
+        preparation,
+        information
+    })
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 4), function(err) {
+        if (err) return res.send('Write file error')
+
+        return res.redirect('/admin/recipes')
+
+    })
 }
 
 // show
