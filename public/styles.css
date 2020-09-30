@@ -385,17 +385,17 @@ header .black-box {
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    margin-left: 210px;
 }
 
 .top-container h3 {
     font-size: 24px;
 }
 
-.top-container a.button {
+.top-container .button {
     background-color: #6558C3;
     color: #FFFFFF;
-    padding: 8px 16px;
+    width: 137px;
+    height: 37px;
     margin-top: 20px;
     border-radius: 4px;
 

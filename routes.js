@@ -19,13 +19,14 @@ routes.get('/admin/recipes', recipes.index)
 routes.get('/admin/recipes/create', recipes.create)
 
 // Exibir detalhes de uma receita
-routes.get('/admin/recipes/:id', recipes.show)
+routes.get('/admin/recipes/:index', recipes.show)
+
+
+// Cadastrar nova receita
+routes.post('/admin/recipes', recipes.post)
 
 // Mostrar formulário de edição de receita
 // routes.get('/admin/recipes/:id/edit', recipes.edit)
-
-// Cadastrar nova receita
-// routes.post('/admin/recipes', recipes.post)
 
 // Editar uma receita
 // routes.put('/admin/recipes', recipes.put)

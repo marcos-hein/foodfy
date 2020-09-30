@@ -1,11 +1,12 @@
 {% extends "layout-admin.njk" %}
 
 {% block content %}
-    <div class="top-container">
-        <h3>Criando receita</h3>
-        <a href="/admin/recipes/{{recipeIndex}}/edit" class="button">Salvar receita</a>
-    </div>
     <form class="recipe-form" action="/admin/recipes" method="POST">
+        <div class="top-container">
+            <h3>Criando receita</h3>
+            <button type="submit" class="button">Salvar receita</button>
+
+        </div>
         <div class="recipe-item">
             <div>Imagem da receita</div>
             <div>
