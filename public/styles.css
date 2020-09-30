@@ -291,7 +291,7 @@ header .black-box {
     background-color: #111111;
 }
 
-.admin {
+.admin-logo {
     width: 940px;
     display: flex;
     align-items: center;
@@ -300,12 +300,13 @@ header .black-box {
 /* ===== CONTENT ADMIN ===== */
 
 .admin.content {
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .manage-recipes {
-    display: block;
+    width: 940px;
     margin-top: 50px;
-    margin-left: 230px;
 }
 
 .admin.content h2 {
@@ -316,7 +317,7 @@ header .black-box {
 /* ===== CARDS ADMIN ===== */
 
 .admin.cards {
-    max-width: 940px;
+    width: 940px;
      
     margin-bottom: 50px;
 
@@ -363,7 +364,10 @@ header .black-box {
 
     padding: 0;
     margin-left: 0px;
-    margin-top: 10px;
+}
+
+.admin .author-recipe {
+    margin-bottom: 10px;
 }
 
 .admin.card a:hover {
@@ -403,6 +407,12 @@ header .black-box {
     font-weight: bold;
     font-size: 16px;
     line-height: 17px;
+}
+
+a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ===== FORM ===== */
