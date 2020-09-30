@@ -1,7 +1,8 @@
-const data = require('../data')
+const data = require('../data.json')
 
 exports.index = function(req, res) {
-    return res.render("admin/index", { recipes : data })
+    const recipes = data.recipes
+    return res.render("admin/index", { recipes })
 }
 
 // create
@@ -9,16 +10,6 @@ exports.create = function(req, res) {
     return res.render("./admin/create")
 }
 
-// show
-exports.show = function(req, res) {
-    const recipeIndex = req.params.index;
-    
-    if (!data[recipeIndex]) {
-        return res.send("Recipe not found!")
-    }
-
-    return res.render("./admin/detail-recipe", { recipe : data[recipeIndex], recipeIndex })
-}
 
 // post
 exports.post = function(req, res) {
@@ -31,8 +22,18 @@ exports.post = function(req, res) {
         }
     }
     
-
     return res.send(req.body)
+}
+
+// show
+exports.show = function(req, res) {
+    const recipeIndex = req.params.index
+
+    const foundRecipe = data.recipes[recipeIndex]
+
+    if (!foundRecipe) return res.send('Recipe not found!')
+
+    return res.render("./admin/detail-recipe", { recipe : foundRecipe, recipeIndex })
 }
 // edit
 
