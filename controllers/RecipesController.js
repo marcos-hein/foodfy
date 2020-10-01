@@ -56,7 +56,14 @@ exports.show = function(req, res) {
     return res.render("./admin/detail-recipe", { recipe : foundRecipe, recipeIndex })
 }
 // edit
+exports.edit = function(req, res) {
+    const recipeIndex = req.params.index
+    const foundRecipe = data.recipes[recipeIndex]
 
+    if (!foundRecipe) return res.send('Recipe not found!')
+    
+    return res.render("./admin/edit", { recipe : foundRecipe })
+}
 
 // put
 

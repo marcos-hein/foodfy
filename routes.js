@@ -26,7 +26,7 @@ routes.get('/admin/recipes/:index', recipes.show)
 routes.post('/admin/recipes', recipes.post)
 
 // Mostrar formulário de edição de receita
-// routes.get('/admin/recipes/:id/edit', recipes.edit)
+routes.get('/admin/recipes/:index/edit', recipes.edit)
 
 // Editar uma receita
 // routes.put('/admin/recipes', recipes.put)
