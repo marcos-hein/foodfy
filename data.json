@@ -24,12 +24,74 @@
             "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
         },
         {
-            "image": "http://naosei.com",
+            "image": "https://img.itdg.com.br/tdg/images/recipes/000/011/915/304251/304251_original.jpg?w=1200",
+            "title": "receita genérica",
+            "author": "vini",
             "ingredients": [
-                "asdoiuhd",
-                "gou"
+                "asdasdioahsiud",
+                "aaiushdiaushdi"
             ],
-            "preparation": "8ygo"
+            "preparation": "aisudhaiushdiu"
+        },
+        {
+            "image": "http://google.com",
+            "title": "receita genérica",
+            "author": "vini",
+            "ingredients": [
+                "kkkkkk",
+                "ppppp"
+            ],
+            "preparation": "oooooo"
+        },
+        {
+            "image": "http://google.com",
+            "title": "receita genérica",
+            "author": "vini",
+            "ingredients": [
+                "oiajsd",
+                "asuid"
+            ],
+            "preparation": "aoisdj"
+        },
+        {
+            "image": "http://google.com",
+            "title": "receita genérica",
+            "author": "vini",
+            "ingredients": [
+                "as",
+                "as",
+                "as",
+                "as",
+                "asdasdasdasd"
+            ],
+            "preparation": "sad"
+        },
+        {
+            "image": "http://google.com",
+            "title": "receita genérica",
+            "author": "vini",
+            "ingredients": [
+                "asd",
+                ""
+            ],
+            "preparation": [
+                "asd",
+                "dsa",
+                ""
+            ],
+            "information": "asdasdadasdad"
+        },
+        {
+            "image": "http://face.com",
+            "title": "receita genérica",
+            "author": "vini",
+            "ingredients": [
+                "csa"
+            ],
+            "preparation": [
+                "cas"
+            ],
+            "information": "asdasdasdasd"
         }
     ]
 }

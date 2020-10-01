@@ -23,10 +23,15 @@ exports.post = function(req, res) {
         }
     }
 
-    let { image, ingredients, preparation, information} = req.body
+    let { image, title, author, ingredients, preparation, information} = req.body
+
+    title = "receita genérica"
+    author = "vini"
 
     data.recipes.push({
         image,
+        title,
+        author,
         ingredients,
         preparation,
         information

@@ -20,12 +20,12 @@
 
         <div class="recipe-item">
             <div>Ingredientes</div>
-            <div id="ingredientes">
+            <div id="ingredients">
                 <div class="ingredient">
                     <input
                         type="text"
-                        name="ingredients"
-                        placeholder=""
+                        name="ingredients[]"
+                        placeholder="Ingrediente"
                     >
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="step">
                     <input
                         type="text"
-                        name="preparation"
+                        name="preparation[]"
                         placeholder=""
                     >
                 </div>
@@ -49,13 +49,9 @@
         </div>
 
         <div class="recipe-item">
-            <div>Informações adcionais</div>
+            <div>Informações adicionais</div>
             <div>
-                <input
-                    type="text"
-                    name="ingredients"
-                    placeholder=""
-                >
+                <textarea name="information" cols="30" rows="10"></textarea>
             </div>
         </div>
     </form>

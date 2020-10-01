@@ -427,13 +427,13 @@ form.recipe-form {
 }
 
 .recipe-item div:nth-child(1) {
-    margin-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
     color: #111111;
 }
 
 .recipe-item button[type="button"] {
+    margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
     background-color: white;
@@ -442,7 +442,8 @@ form.recipe-form {
     outline: none;
 }
 
-input {
+input,
+textarea {
     width: 940px;
     height: 49px;
     outline: none;
@@ -453,10 +454,18 @@ input {
     font-size: 14px;
     
     padding-left: 4px;
+    margin-top: 10px;
 }
 
-.recipe-item:last-child input{
+.recipe-item textarea {
+    width: 940px;
     height: 257px;
+    padding: 20px 0 20px 20px;
+    resize: none;
+}
+
+.recipe-item:last-child {
+    margin-left: 15px;
 }
 
 input::placeholder {

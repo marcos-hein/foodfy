@@ -2,6 +2,40 @@ const cards = document.querySelectorAll(".card")
 const hideShowButtons = document.querySelectorAll(".button.hide-show")
 const recipeInfos = document.querySelectorAll(".recipe-hide-show")
 
+
+function addIngredient() {
+    console.log('entreni na função')
+    const ingredients = document.querySelector('#ingredients')
+    const fieldContainer = document.querySelectorAll('.ingredient')
+
+    const newField = fieldContainer[fieldContainer.length -1].cloneNode(true)
+    if (newField.children[0].value == "") return false
+
+    newField.children[0].value = ""
+    ingredients.appendChild(newField)
+}
+
+function addStep() {
+    const steps = document.querySelector('#steps')
+    const fieldContainer = document.querySelectorAll('.step')
+
+    const newField = fieldContainer[fieldContainer.length -1].cloneNode(true)
+    console.log(steps)
+    if (newField.children[0].value == "") return false
+
+    newField.children[0].value = ""
+    steps.appendChild(newField)
+}
+
+document
+    .querySelector('.add-ingredient')
+    .addEventListener('click', addIngredient)
+
+document
+    .querySelector('.add-step')
+    .addEventListener('click', addStep)
+
+// Mostra receita
 for (const card of cards) {
     card.addEventListener("click", function() {
         const recipeId = card.getAttribute('id')
@@ -10,20 +44,7 @@ for (const card of cards) {
     })
 }
 
-// for (let i = 0; i < hideShowButtons.length; i++) {
-//     hideShowButtons[i].addEventListener("click", function() {
-//         if(recipeInfos[i].classList.contains('hidden')) {
-//             recipeInfos[i].classList.remove('hidden')
-
-//             hideShowButtons[i].textContent = 'ESCONDER'
-//         } else {
-//             recipeInfos[i].classList.add('hidden')
-            
-//             hideShowButtons[i].textContent = 'MOSTRAR'
-//         }
-//     })
-// }
-
+// Esconde e mostra detalhes da receita
 for (const button in hideShowButtons) {
     hideShowButtons[button].addEventListener("click", function() {
         if(recipeInfos[button].classList.contains('hidden')) {
@@ -37,4 +58,5 @@ for (const button in hideShowButtons) {
         }
     })
 }
+
 
