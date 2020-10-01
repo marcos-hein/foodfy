@@ -13,14 +13,27 @@
 <div class="recipe-item">
     <div>Ingredientes</div>
     <div id="ingredients">
-        <div class="ingredient">
-            <input
-                type="text"
-                name="ingredients[]"
-                placeholder="Ingrediente"
-            value="{{ recipe.ingredients }}"
-            >
-        </div>
+        {% if recipe.ingredients %}
+            {% for ingredient in recipe.ingredients %}
+                <div class="ingredient">
+                    <input
+                        type="text"
+                        name="ingredients[]"
+                        placeholder="Ingrediente"
+                    value="{{ ingredient }}"
+                    >
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="ingredient">
+                <input
+                    type="text"
+                    name="ingredients[]"
+                    placeholder="Ingrediente"
+                value="{{ ingredient }}"
+                >
+            </div>
+        {% endif %}
     </div>
 
     <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
@@ -29,14 +42,27 @@
 <div class="recipe-item">
     <div>Modo de preparo</div>
     <div id="steps">
-        <div class="step">
-            <input
-                type="text"
-                name="preparation[]"
-                placeholder=""
-            value="{{ recipe.preparation }}"
-            >
-        </div>
+        {% if recipe.preparation %}
+            {% for step in recipe.preparation %}
+                <div class="step">
+                    <input
+                        type="text"
+                        name="preparation[]"
+                        placeholder=""
+                    value="{{ step }}"
+                    >
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="step">
+                <input
+                    type="text"
+                    name="preparation[]"
+                    placeholder=""
+                value=""
+                >
+            </div>
+        {% endif %}
     </div>
 
     <button type="button" class="add-step">Adicionar novo passo</button>

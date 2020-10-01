@@ -11,7 +11,6 @@ exports.create = function(req, res) {
     return res.render("./admin/create")
 }
 
-
 // post
 exports.post = function(req, res) {
 

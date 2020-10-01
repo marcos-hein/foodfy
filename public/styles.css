@@ -424,6 +424,7 @@ form.recipe-form {
 }
 .recipe-item {
     margin-top: 30px;
+    margin-left: 15px;
 }
 
 .recipe-item div:nth-child(1) {
@@ -450,10 +451,10 @@ textarea {
     color: #555555;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: normal;
+    font-size: 16px;
     
-    padding-left: 4px;
+    padding-left: 20px;
     margin-top: 10px;
 }
 
@@ -464,9 +465,9 @@ textarea {
     resize: none;
 }
 
-.recipe-item:last-child {
+/* .recipe-item:last-child {
     margin-left: 15px;
-}
+} */
 
 input::placeholder {
     font-weight: normal;
