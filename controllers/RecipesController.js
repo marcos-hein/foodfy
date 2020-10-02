@@ -74,5 +74,29 @@ exports.edit = function(req, res) {
 }
 
 // put
+exports.put = function(req, res) {
+    const recipeIndex = req.params.index
+    const foundRecipe = data.recipes[recipeIndex]
+    console.log(recipeIndex)
+    console.log(foundRecipe)
+
+    if (!foundRecipe) return res.send('Recipe not found!')
+
+    foundRecipe.ingredients = removeLastEmptyElement(foundRecipe.ingredients)
+    foundRecipe.preparation = removeLastEmptyElement(foundRecipe.preparation)
+
+    const recipe = {
+        ...foundRecipe,
+        ...req.body
+    }
+    
+    data.recipes[recipeIndex] = recipe
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send('Write error!')
+
+        return res.redirect(`/admin/recipes/${recipeIndex}`)
+    })
+}
 
 // delete

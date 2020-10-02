@@ -29,7 +29,7 @@ routes.post('/admin/recipes', recipes.post)
 routes.get('/admin/recipes/:index/edit', recipes.edit)
 
 // Editar uma receita
-// routes.put('/admin/recipes', recipes.put)
+routes.put('/admin/recipes/', recipes.put)
 
 // Deletar uma receita
 // routes.delete('/admin/recipes', recipes.delete)
