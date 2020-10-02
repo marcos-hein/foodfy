@@ -1,6 +1,13 @@
 const fs = require('fs')
 const data = require('../data.json')
 
+function removeLastEmptyElement (array) {
+    if (array[array.length - 1] == "") {
+        array.pop()
+    }
+    return array
+}
+
 exports.index = function(req, res) {
     const recipes = data.recipes
     return res.render("admin/index", { recipes })
@@ -26,6 +33,8 @@ exports.post = function(req, res) {
 
     title = "receita genérica"
     author = "vini"
+    ingredients = removeLastEmptyElement(ingredients)
+    preparation = removeLastEmptyElement(preparation)
 
     data.recipes.push({
         image,
