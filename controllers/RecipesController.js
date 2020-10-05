@@ -35,8 +35,10 @@ exports.post = function(req, res) {
     author = "vini"
     ingredients = removeLastEmptyElement(ingredients)
     preparation = removeLastEmptyElement(preparation)
+    const id = Number(data.recipes.length + 1)
 
     data.recipes.push({
+        id,
         image,
         title,
         author,
@@ -55,18 +57,23 @@ exports.post = function(req, res) {
 
 // show
 exports.show = function(req, res) {
-    const recipeIndex = req.params.index
+    const { id } = req.params
 
-    const foundRecipe = data.recipes[recipeIndex]
+    const foundRecipe = data.recipes.find(function(recipe) {
+        return recipe.id == id
+    })
 
     if (!foundRecipe) return res.send('Recipe not found!')
 
-    return res.render("./admin/detail-recipe", { recipe : foundRecipe, recipeIndex })
+    return res.render("./admin/detail-recipe", { recipe : foundRecipe })
 }
 // edit
 exports.edit = function(req, res) {
-    const recipeIndex = req.params.index
-    const foundRecipe = data.recipes[recipeIndex]
+    const { id } = req.params
+
+    const foundRecipe = data.recipes.find(function(recipe) {
+        return recipe.id == id
+    })
 
     if (!foundRecipe) return res.send('Recipe not found!')
     
@@ -75,10 +82,16 @@ exports.edit = function(req, res) {
 
 // put
 exports.put = function(req, res) {
-    const recipeIndex = req.params.index
-    const foundRecipe = data.recipes[recipeIndex]
-    console.log(recipeIndex)
-    console.log(foundRecipe)
+    const { id } = req.body
+
+    let index = 0
+
+    const foundRecipe = data.recipes.find(function(recipe, foundIndex) {
+        if (id == recipe.id) {
+            index = foundIndex
+            return true
+        }
+    })
 
     if (!foundRecipe) return res.send('Recipe not found!')
 
@@ -90,12 +103,12 @@ exports.put = function(req, res) {
         ...req.body
     }
     
-    data.recipes[recipeIndex] = recipe
+    data.recipes[index] = recipe
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if (err) return res.send('Write error!')
 
-        return res.redirect(`/admin/recipes/${recipeIndex}`)
+        return res.redirect(`/admin/recipes/${id}`)
     })
 }
 
