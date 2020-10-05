@@ -395,7 +395,8 @@ header .black-box {
     font-size: 24px;
 }
 
-.top-container .button {
+.top-container .button,
+.delete-button {
     background-color: #6558C3;
     color: #FFFFFF;
     width: 137px;
@@ -407,6 +408,10 @@ header .black-box {
     font-weight: bold;
     font-size: 16px;
     line-height: 17px;
+}
+
+.delete-button {
+    background-color: #DC4747;
 }
 
 a.button {

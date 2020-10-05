@@ -32,7 +32,7 @@ routes.get('/admin/recipes/:id/edit', recipes.edit)
 routes.put('/admin/recipes/', recipes.put)
 
 // Deletar uma receita
-// routes.delete('/admin/recipes', recipes.delete)
+routes.delete('/admin/recipes', recipes.delete)
 
 
 module.exports = routes
