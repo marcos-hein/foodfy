@@ -10,7 +10,16 @@
 
 ## 📖️ Sobre
 
-O projeto **FoodFy** é um site de receitas, criado dentro do curso **Launchbase** da RocketSeat.
+O projeto **FoodFy** é um site de receitas, é possível criar, editar e deletar as receitas.
+
+---
+
+## 📋 Foodfy Admin 
+<div>
+   <img src="./public/images/foodfy-admin.png" width="900px">
+   <img src="./public/images/foodfy-admin-create.png" width="900px">
+   <img src="./public/images/foodfy-admin-edit.png" width="900px">
+</div>
 
 ---
 
@@ -23,6 +32,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias.
 - JavaScript
 - NodeJs
 - Nunjucks
+- Express
 
 ---
 
