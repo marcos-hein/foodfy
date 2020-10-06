@@ -4,22 +4,22 @@
     <div class="content">
         <div class="detail-recipe">
             <div class="recipes-image">
-                <img src="{{ recipes.image }}" alt="Imagem de {{ recipes.title }}">
+                <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.title }}">
             </div>
             <div class="recipes-name">
-                <h2>{{ recipes.title }}</h2>
+                <h2>{{ recipe.title }}</h2>
             </div>
             <div class="author-recipes">
-                <p>por {{ recipes.author }}</p>
+                <p>por {{ recipe.author }}</p>
             </div>
             <div class="recipes-ingredients">
                 <div class="subtitle">
                     <h3>Ingredientes</h3>
 
-                    <span class="button">ESCONDER</span>
+                    <span class="button hide-show">ESCONDER</span>
                 </div>
                 <ul class="recipe-hide-show">
-                    {% for ingredient in recipes.ingredients %}
+                    {% for ingredient in recipe.ingredients %}
                         <li>{{ ingredient }}</li>
                     {% endfor %}
                 </ul>
@@ -28,10 +28,10 @@
                 <div class="subtitle">
                     <h3>Modo de preparo</h3>
 
-                    <span class="button">ESCONDER</span>
+                    <span class="button hide-show">ESCONDER</span>
                 </div>
                 <ul class="recipe-hide-show">
-                    {% for preparation in recipes.preparation %}
+                    {% for preparation in recipe.preparation %}
                         <li>{{ preparation }}</li>
                     {% endfor %}
                 </ul>
@@ -40,9 +40,9 @@
                 <div class="subtitle">
                     <h3>Informações adicionais</h3>
 
-                    <span class="button">ESCONDER</span>
+                    <span class="button hide-show">ESCONDER</span>
                 </div>
-                <p class="recipe-hide-show">{{ recipes.information }}</p>
+                <p class="recipe-hide-show">{{ recipe.information }}</p>
             </div>
         </div>
         

@@ -67,6 +67,7 @@ exports.show = function(req, res) {
 
     return res.render("./admin/detail-recipe", { recipe : foundRecipe })
 }
+
 // edit
 exports.edit = function(req, res) {
     const { id } = req.params

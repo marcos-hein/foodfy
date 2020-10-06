@@ -7,7 +7,7 @@ const recipes = require('./controllers/RecipesController')
 routes.get('/', foodfy.index)
 routes.get('/about-foodfy', foodfy.about)
 routes.get('/recipes', foodfy.recipes)
-routes.get('/recipes/:index', foodfy.recipeDetails)
+routes.get('/recipes/:id', foodfy.recipeDetails)
 
 
 // Rotas do admin
