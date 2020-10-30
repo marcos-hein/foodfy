@@ -113,7 +113,7 @@ header .menu {
     background: #eeeeee;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 62px;
 }
 
