@@ -1,5 +1,5 @@
 const fs = require('fs')
-const data = require('../data.json')
+const data = require('../../data.json')
 
 function removeLastEmptyElement (array) {
     if (array[array.length - 1] == "") {
@@ -10,12 +10,12 @@ function removeLastEmptyElement (array) {
 
 exports.index = function(req, res) {
     const recipes = data.recipes
-    return res.render("admin/index", { recipes })
+    return res.render("../views/admin/recipes/index", { recipes })
 }
 
 // create
 exports.create = function(req, res) {
-    return res.render("./admin/create")
+    return res.render("../views/admin/recipes/create")
 }
 
 // post
@@ -65,7 +65,7 @@ exports.show = function(req, res) {
 
     if (!foundRecipe) return res.send('Recipe not found!')
 
-    return res.render("./admin/detail-recipe", { recipe : foundRecipe })
+    return res.render("../views/admin/recipes/detail-recipe.njk", { recipe : foundRecipe })
 }
 
 // edit
@@ -78,7 +78,7 @@ exports.edit = function(req, res) {
 
     if (!foundRecipe) return res.send('Recipe not found!')
     
-    return res.render("./admin/edit", { recipe : foundRecipe })
+    return res.render("../views/admin/recipes/edit", { recipe : foundRecipe })
 }
 
 // put

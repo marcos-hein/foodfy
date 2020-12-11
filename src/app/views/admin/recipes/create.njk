@@ -1,0 +1,18 @@
+{% extends "layout-admin.njk" %}
+
+{% block content %}
+    <form class="recipe-form" action="/admin/recipes" method="POST">
+        <div class="top-container">
+            <h3>Criando receita</h3>
+            <button type="submit" class="button">Salvar receita</button>
+
+        </div>
+        
+        {% include './fields.njk' %}
+
+    </form>
+
+
+{% include './add-field.njk' %}
+
+{% endblock content %}
