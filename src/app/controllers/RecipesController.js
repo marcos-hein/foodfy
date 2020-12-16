@@ -1,3 +1,5 @@
+const { date } = require("../../lib/utils")
+const db = require("../../config/db")
 function removeLastEmptyElement (array) {
     if (array[array.length - 1] == "") {
         array.pop()
@@ -23,7 +25,34 @@ module.exports = {
             }
         }
     
-        let { image, title, author, ingredients, preparation, information} = req.body
+        const query = `
+            INSERT INTO recipes (
+                chef_id,
+                image,
+                title,
+                ingredients,
+                preparation,
+                information,
+                created_at
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+            RETURNING id
+        `
+
+        const values = [
+            req.body.chef_id,
+            req.body.image,
+            req.body.title,
+            req.body.ingredients,
+            req.body.preparation,
+            req.body.information,
+            date(Date.now()).iso
+        ]
+
+        db.query(query, values, function(err, results) {
+            if(err) throw `Database error! ${err}`
+
+            return(results.rows[0])
+        })
     
         return
     },
