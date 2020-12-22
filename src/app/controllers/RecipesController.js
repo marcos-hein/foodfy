@@ -1,16 +1,17 @@
 const { date } = require("../../lib/utils")
-const db = require("../../config/db")
-function removeLastEmptyElement (array) {
-    if (array[array.length - 1] == "") {
-        array.pop()
-    }
-    return array
-}
+const Recipe = require("../models/Recipe")
+// function removeLastEmptyElement (array) {
+//     if (array[array.length - 1] == "") {
+//         array.pop()
+//     }
+//     return array
+// }
 
 module.exports = {
     index(req, res) {
-        const recipes = data.recipes
-        return res.render("../views/admin/recipes/index", { recipes })
+        Recipe.all(function(callback) {
+            return res.render("/admin/recipes/index", { recipes })
+        })
     },    
     create(req, res) {
         return res.render("../views/admin/recipes/create")
@@ -24,37 +25,10 @@ module.exports = {
                 return res.send('Please, Fill all fields!')
             }
         }
-    
-        const query = `
-            INSERT INTO recipes (
-                chef_id,
-                image,
-                title,
-                ingredients,
-                preparation,
-                information,
-                created_at
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
-            RETURNING id
-        `
 
-        const values = [
-            req.body.chef_id,
-            req.body.image,
-            req.body.title,
-            req.body.ingredients,
-            req.body.preparation,
-            req.body.information,
-            date(Date.now()).iso
-        ]
-
-        db.query(query, values, function(err, results) {
-            if(err) throw `Database error! ${err}`
-
-            return(results.rows[0])
+        Recipe.create(req.body, function(recipe) {
+            return res.redirect(`/admin/recipes/${recipe.id}`)
         })
-    
-        return
     },
     show(req, res) {
        return
