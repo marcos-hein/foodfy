@@ -52,8 +52,7 @@ header .menu {
     width: 940px;
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    justify-content: center;
 }
 
 .menu a {
@@ -294,14 +293,20 @@ header .black-box {
     width: 100vw;
     height: 80px;
     display: flex;
-    justify-content: center;
     background-color: #111111;
 }
 
 .admin-logo {
-    width: 940px;
     display: flex;
     align-items: center;
+}
+
+.black-box a {
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    color: #FFFFFF;
 }
 
 /* ===== CONTENT ADMIN ===== */
