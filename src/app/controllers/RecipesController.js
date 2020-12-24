@@ -9,8 +9,8 @@ const Recipe = require("../models/Recipe")
 
 module.exports = {
     index(req, res) {
-        Recipe.all(function(callback) {
-            return res.render("/admin/recipes/index", { recipes })
+        Recipe.all(function(recipes) {
+            return res.render("admin/recipes/index", { recipes })
         })
     },    
     create(req, res) {
@@ -31,7 +31,11 @@ module.exports = {
         })
     },
     show(req, res) {
-       return
+        Recipe.find(req.params.id, function(recipe) {
+            if (!recipe) return res.send("Recipe not found!")
+
+            return res.render("/admin/recipes/:id")
+        })
     },
     edit(req, res) {
         return

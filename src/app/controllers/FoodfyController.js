@@ -1,7 +1,7 @@
-const data = require('../../data.json')
+// const data = require('../../data.json')
 
 exports.index = function(req, res) {
-    return res.render("site/index", { recipes : data.recipes })
+    // return res.render("site/index", { recipes :  })
 }
 
 exports.about = function(req, res) {
@@ -9,15 +9,15 @@ exports.about = function(req, res) {
 }
 
 exports.recipes = function(req, res) {
-    return res.render("site/recipes", { recipes : data.recipes })
+    // return res.render("site/recipes", { recipes :  })
 }
 
 exports.recipeDetails = function(req, res) {
     const { id } = req.params
 
-    const foundRecipe = data.recipes.find(function(recipe) {
-        return recipe.id == id
-    })
+    // const foundRecipe = .find(function(recipe) {
+    //     return recipe.id == id
+    // })
 
     if (!foundRecipe) return res.send("Recipe not found!")
 
