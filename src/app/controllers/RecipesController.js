@@ -34,11 +34,15 @@ module.exports = {
         Recipe.find(req.params.id, function(recipe) {
             if (!recipe) return res.send("Recipe not found!")
 
-            return res.render("admin/recipes/detail-recipe")
+            return res.render("admin/recipes/detail-recipe", { recipe })
         })
     },
     edit(req, res) {
-        return res.render("admin/recipes/edit")
+        Recipe.find(req.params.id, function(recipe) {
+            if (!recipe) return res.send("Recipe not found!")
+
+            return res.render("admin/recipes/edit", { recipe })
+        })
     },
     put(req, res) {const keys = Object.keys(req.body)
     

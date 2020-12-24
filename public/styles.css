@@ -306,7 +306,8 @@ header .black-box {
     align-items: center;
 
     font-size: 15px;
-    color: #FFFFFF;
+    font-weight: bold;
+    color: #999999;
 }
 
 /* ===== CONTENT ADMIN ===== */
@@ -415,6 +416,7 @@ header .black-box {
     height: 37px;
     margin-top: 20px;
     border-radius: 4px;
+    cursor: pointer;
 
     font-family: 'Roboto';
     font-weight: bold;
