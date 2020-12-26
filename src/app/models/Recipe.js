@@ -48,5 +48,33 @@ module.exports = {
                 
                 callback(results.rows[0])
         })
+    },
+    update(data, callback) {
+        const query = `
+            UPDATE recipes SET
+                chef_id=($1),
+                image=($2),
+                title=($3),
+                ingredients=($4),
+                preparation=($5),
+                information=($6)
+            WHERE id = $7
+        `
+
+        const values = [
+            data.chef_id,
+            data.image,
+            data.title,
+            data.ingredients,
+            data.preparation,
+            data.information,
+            data.id
+        ]
+
+        db.query(query, values, function(err, results) {
+            if (err) throw `Database error! ${err}`
+
+            return callback()
+        })
     }
 }

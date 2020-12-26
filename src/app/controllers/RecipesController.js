@@ -44,7 +44,8 @@ module.exports = {
             return res.render("admin/recipes/edit", { recipe })
         })
     },
-    put(req, res) {const keys = Object.keys(req.body)
+    put(req, res) {
+        const keys = Object.keys(req.body)
     
         for(const key of keys) {
             if (req.body[key] == "") {
@@ -52,9 +53,9 @@ module.exports = {
             }
         }
     
-        let { image, title, author, ingredients, preparation, information} = req.body
-    
-        return
+        Recipe.update(req.body, () => {
+            return res.redirect(`/admin/recipes/${req.body.id}`)
+        })
 
     },
     delete(req, res) {
