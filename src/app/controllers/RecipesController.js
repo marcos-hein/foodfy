@@ -59,7 +59,9 @@ module.exports = {
 
     },
     delete(req, res) {
-        return
+        Recipe.delete(req.body.id, () => {
+            return res.redirect("/admin/recipes")
+        })
     }
 }
 
