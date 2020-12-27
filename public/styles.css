@@ -436,23 +436,27 @@ a.button {
 
 /* ===== FORM ===== */
 
-form.recipe-form {
+form.recipe-form,
+form.chef-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.recipe-item {
+.recipe-item,
+.chef-item {
     margin-top: 30px;
     margin-left: 15px;
 }
 
-.recipe-item div:nth-child(1) {
+.recipe-item div:nth-child(1),
+.chef-item div:nth-child(1) {
     font-size: 16px;
     font-weight: bold;
     color: #111111;
 }
 
-.recipe-item button[type="button"] {
+.recipe-item button[type="button"],
+.chef-item button[type="button"] {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
