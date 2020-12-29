@@ -3,22 +3,19 @@
 
 {% block content %}
     <div class="admin content">
-        <div class="manage-chefs">
+        <div class="manage">
             <h2>Gerenciar chefs</h2> 
         </div>
 
         <section class="admin cards">
             {% for chef in chefs %}
-                <div class="admin card" id={{chefs.indexOf(chef)}}>
+                <div class="admin card chef" id={{chefs.indexOf(chef)}}>
                     <div class="admin chef-avatar">
                         <img src={{chef.avatar_url}} alt="Imagem de {{ chef.title }}">
                     </div>
                     <div class="chef-detail">
                         <div class="admin chef-name">
                             <h3>{{ chef.name }}</h3>
-                        </div>
-                        <div class="admin author-chef">
-                            <p>por {{ chef.author }}</p>
                         </div>
                         <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
                     </div>
