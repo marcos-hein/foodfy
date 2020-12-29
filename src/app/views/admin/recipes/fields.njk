@@ -11,6 +11,17 @@
 </div>
 
 <div class="recipe-item">
+    <div>Nome da receita</div>
+    <div>
+        <input
+            type="text"
+            name="title"
+            value="{{ recipe.title }}"
+        >
+    </div>
+</div>
+
+<div class="recipe-item">
     <div>Chef</div>
         <select name="chef">
             {% for chef in chefOptions %}
