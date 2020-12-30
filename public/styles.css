@@ -14,6 +14,7 @@ body {
     position: relative;
     padding-bottom: 50px;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -250,7 +251,8 @@ header .menu {
     color: #444444;
 }
 
-.author-recipes p {
+.author-recipes p,
+.amount-of-recipes p {
     font-size: 20px;
     color: #777777;
 }
@@ -504,7 +506,6 @@ input::placeholder {
     display: grid;
     grid-template-columns: 64px 1fr;
     gap: 20px;
-    cursor: pointer;
 }
 
 .admin.chef-avatar img{
@@ -517,6 +518,29 @@ input::placeholder {
     margin-bottom: 10px;
 }
 
-.chef-detail {
+.chef-info {
     margin-top: 5px;
+}
+
+.detail-chef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-chef .chef-avatar {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.detail-chef .chef-avatar img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.detail-chef .chef-name h2 {
+    font-size: 36px;
+    margin-bottom: 4px;
 }

@@ -4,24 +4,24 @@
     <div class="content">
         <div class="top-container">
             <h3>Chef: {{ chef.name }}</h3>
-            <a href="/admin/chefs/{{chef.id}}/edit" class="button">Editar receita</a>
+            <a href="/admin/chefs/{{chef.id}}/edit" class="button">Editar Chef</a>
         </div>
         <div class="detail-chef">
-
-            <div class="chefs-avatar">
+            <div class="chef-avatar">
                 <img src="{{ chef.avatar_url }}" alt="Imagem de {{ chef.name }}">
             </div>
-            <div class="chefs-name">
+
+            <div class="chef-name">
                 <h2>{{ chef.name }}</h2>
             </div>
+
             <div class="amount-of-recipes">
-                <p>Quantidade de receitas</p>
-            </div>
-            <div class="grade com receitas">
-                <div class="subtitle">
-                    <h3>Receitas</h3>
-                </div>
+                <p>X receitas</p>
             </div>
 
-    <script src="/scripts.js"></script>
+            <div class="grade com receitas">
+                
+            </div>
+
+    {# <script src="/scripts.js"></script> #}
 {% endblock content %}
