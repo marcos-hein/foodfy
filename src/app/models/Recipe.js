@@ -24,7 +24,7 @@ module.exports = {
         `
 
         const values = [
-            data.chef_id,
+            data.chef,
             data.image,
             data.title,
             data.ingredients,
@@ -49,6 +49,17 @@ module.exports = {
                 callback(results.rows[0])
         })
     },
+    chefOptions(callback) {
+        db.query(`
+            SELECT name, id
+            FROM chefs
+        `, function(err, results) {
+            if (err) throw `Database error! ${err}`
+
+            callback(results.rows)
+        })
+
+    },
     update(data, callback) {
         const query = `
             UPDATE recipes SET
@@ -62,7 +73,7 @@ module.exports = {
         `
 
         const values = [
-            data.chef_id,
+            data.chef,
             data.image,
             data.title,
             data.ingredients,
