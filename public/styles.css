@@ -331,17 +331,23 @@ header .black-box {
 
 /* ===== CARDS ADMIN ===== */
 
-.admin.cards {
-    width: 940px;
-     
+.admin.cards.chefs {
+    width: 940px;    
     margin-bottom: 50px;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 0px;
     column-gap: 20px;
 }
 
+.admin.cards.recipes {
+    width: 940px;    
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0px;
+    column-gap: 20px;
+}
 .admin.card {
     display: grid;
     grid-template-columns: 172px 1fr;

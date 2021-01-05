@@ -7,7 +7,7 @@
             <h2>Gerenciar receitas</h2> 
         </div>
 
-        <section class="admin cards">
+        <section class="admin cards recipes">
             {% for recipe in recipes %}
                 <div class="admin card" id={{recipes.indexOf(recipe)}}>
                     <div class="admin recipe-image">
@@ -28,5 +28,5 @@
         </section>
     </div>
         
-    <script src="/scripts.js"></script>
+    {# <script src="/scripts.js"></script> #}
 {% endblock content %}
