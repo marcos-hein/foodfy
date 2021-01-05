@@ -43,6 +43,17 @@ module.exports = {
                 callback(results.rows[0])
         })
     },
+    chefRecipes(id, callback) {
+        db.query(`
+            SELECT recipes.*, chefs.name AS chef_name
+            FROM recipes
+            LEFT JOIN chefs ON (chefs.id = recipes.chef_id)
+            WHERE chefs.id = $1`, [id], function(err, results) {
+                if (err) throw `Database error! ${err}`
+
+                callback(results.rows)
+            })
+    },
     update(data, callback) {
         const query = `
             UPDATE chefs SET

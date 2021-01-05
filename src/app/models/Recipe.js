@@ -3,10 +3,14 @@ const db = require("../../config/db")
 
 module.exports = {
     all(callback) {
-        db.query(`SELECT * FROM recipes`, function(err, results) {
-            if(err) throw `Database error! ${err}`
+        db.query(`
+            SELECT recipes.*, chefs.name AS chef_name
+            FROM recipes
+            LEFT JOIN chefs ON (chefs.id = chef_id)            
+            `, function(err, results) {
+                if(err) throw `Database error! ${err}`
 
-            callback(results.rows)
+                callback(results.rows)
         })
     },
     create(data, callback) {

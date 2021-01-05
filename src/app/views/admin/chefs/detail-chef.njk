@@ -22,10 +22,35 @@
                     {% if chef.total_recipes <= 1 %} receita {% endif %}
                 </p>
             </div>
+        </div>
+            <div class="admin content">
+                <div class="manage">
+                    <h2>Receitas</h2> 
+                </div>
 
-            <div class="grade com receitas">
-                
+                <section class="admin cards recipes">
+                    {% for recipe in recipes %}
+                        <div class="admin card" id={{recipes.indexOf(recipe)}}>
+                            <div class="admin recipe-image">
+                                <img src={{recipe.image}} alt="Imagem de {{ recipe.title }}">
+                            </div>
+                            <div class="recipe-detail">
+                                <div class="admin recipe-name">
+                                    <h3>{{ recipe.title }}</h3>
+                                </div>
+                                <div class="admin author-recipe">
+                                    <p>por {{ recipe.chef_name }}</p>
+                                </div>
+                                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </section>
             </div>
+
+    </div>
+    
 
     {# <script src="/scripts.js"></script> #}
 {% endblock content %}
