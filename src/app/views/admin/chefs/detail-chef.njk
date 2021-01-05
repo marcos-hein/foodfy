@@ -16,7 +16,11 @@
             </div>
 
             <div class="amount-of-recipes">
-                <p>X receitas</p>
+                <p>
+                    {{chef.total_recipes}}
+                    {% if chef.total_recipes > 1 %} receitas {% endif %}
+                    {% if chef.total_recipes <= 1 %} receita {% endif %}
+                </p>
             </div>
 
             <div class="grade com receitas">
